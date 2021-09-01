@@ -16,9 +16,9 @@ ___
 Для игры используются изображения руки(с выбранным символом) из галереи, фотографии или камеры. Приложение распознает показанный вами символ, сравнивает со своим и выдает результат - Победа или поражение.
 </br></br>
 Задачи:
-- Реализовать распознание символов
+- Реализовать распознание руки
 - Реализовать показ символа приложением
 - Подсчет очков
 
-
-
+**NOTE**</br>
+A stripped-down version of the original RPS dataset created by Julien de la Brewer-Terreau and hosted at https://www.kaggle.com/drgfreeman/rockpaperscissors is used.
