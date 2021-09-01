@@ -8,12 +8,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var resultLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupView()
     }
-
+    
+    
+    @IBAction func fetchFromCamera(_ sender: UIButton) {
+    }
+    
+    @IBAction func fetchFromGallery(_ sender: UIButton) {
+    }
+    
+    @IBAction func fetchFromLiveRecording(_ sender: UIButton) {
+    }
+    
+    private func setupView() {
+        
+        imageView.layer.cornerRadius = 5
+        resultLabel.layer.masksToBounds = true
+        resultLabel.layer.cornerRadius = 5
+    }
+    
 
 }
 
