@@ -21,9 +21,21 @@ class ViewController: UIViewController {
     
     
     @IBAction func fetchFromCamera(_ sender: UIButton) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
     }
     
     @IBAction func fetchFromGallery(_ sender: UIButton) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
     }
     
     @IBAction func fetchFromLiveRecording(_ sender: UIButton) {
@@ -39,3 +51,23 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        var imageToSave: UIImage?
+        
+        if let editedImage = info[.editedImage] as? UIImage {
+            imageToSave  = editedImage
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            imageToSave = originalImage
+        }
+        imageView.image = imageToSave
+        resultLabel.text = "test"
+        dismiss(animated: true)
+    }
+}

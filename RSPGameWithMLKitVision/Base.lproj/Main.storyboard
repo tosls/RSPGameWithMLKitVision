@@ -26,7 +26,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diG-k8-KBl">
                                 <rect key="frame" x="20" y="409.5" width="280" height="40"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5Eb-XH-re5"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="nVu-bD-ukB"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal">
                                             <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
                                         </state>
@@ -55,7 +55,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7L4-qd-msR"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal">
                                             <imageReference key="image" image="photo.on.rectangle.angled" catalog="system" symbolScale="large"/>
                                         </state>
@@ -68,7 +68,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="wZ0-Sr-QZ0"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <state key="normal">
                                             <imageReference key="image" image="video" catalog="system" symbolScale="large"/>
                                         </state>
@@ -107,11 +107,14 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="video" catalog="system" width="128" height="83"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
