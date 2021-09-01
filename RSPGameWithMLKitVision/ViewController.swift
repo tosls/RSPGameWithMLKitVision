@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         setupView()
     }
     
-    
     @IBAction func fetchFromCamera(_ sender: UIButton) {
         
         let imagePicker = UIImagePickerController()
@@ -38,17 +37,12 @@ class ViewController: UIViewController {
         present(imagePicker, animated: true)
     }
     
-    @IBAction func fetchFromLiveRecording(_ sender: UIButton) {
-    }
-    
     private func setupView() {
         
         imageView.layer.cornerRadius = 5
         resultLabel.layer.masksToBounds = true
         resultLabel.layer.cornerRadius = 5
     }
-    
-
 }
 
 extension ViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {

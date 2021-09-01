@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-MM-gfS">
-                                <rect key="frame" x="20" y="20" width="280" height="369.5"/>
+                                <rect key="frame" x="20" y="20" width="280" height="300"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="369.5" id="9B4-O9-gey"/>
+                                    <constraint firstAttribute="height" constant="300" id="9B4-O9-gey"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diG-k8-KBl">
-                                <rect key="frame" x="20" y="409.5" width="280" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diG-k8-KBl">
+                                <rect key="frame" x="20" y="340" width="280" height="40"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5Eb-XH-re5"/>
@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmM-MU-D0M">
-                                        <rect key="frame" x="124" y="0.0" width="32.5" height="50"/>
+                                        <rect key="frame" x="247.5" y="0.0" width="32.5" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7L4-qd-msR"/>
                                         </constraints>
@@ -61,19 +61,6 @@
                                         </state>
                                         <connections>
                                             <action selector="fetchFromGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pow-pC-Oxk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s73-T8-fAj">
-                                        <rect key="frame" x="250" y="0.0" width="30" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="wZ0-Sr-QZ0"/>
-                                        </constraints>
-                                        <color key="tintColor" systemColor="systemPinkColor"/>
-                                        <state key="normal">
-                                            <imageReference key="image" image="video" catalog="system" symbolScale="large"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="fetchFromLiveRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lva-zT-cNK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -106,7 +93,6 @@
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
-        <image name="video" catalog="system" width="128" height="83"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
