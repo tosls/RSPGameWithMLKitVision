@@ -14,9 +14,9 @@ class AISign {
     
     private init() {}
 
-    private let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 2)
+    let randomChoice = GKRandomDistribution(lowestValue: 0, highestValue: 2)
 
-    private func aiRandomChoice() -> Sign {
+    func aiRandomChoice() -> Sign {
     
         let choice = randomChoice.nextInt()
         var aiSign: Sign {

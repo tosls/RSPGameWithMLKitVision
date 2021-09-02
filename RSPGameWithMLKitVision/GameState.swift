@@ -16,5 +16,16 @@ enum GameState {
 enum Sign {
     
     case rock, papper, scissors
-        
+    
+    var emojiSign: String {
+        switch self {
+        case .papper:
+            return "📄"
+        case .rock:
+            return "🪨"
+        case .scissors:
+            return "✂️"
+            
+        }
+    }
 }

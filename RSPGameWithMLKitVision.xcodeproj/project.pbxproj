@@ -10,6 +10,7 @@
 		193EA58026DFB764002D9F66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 193EA57F26DFB764002D9F66 /* FirebaseAnalytics */; };
 		193EA58226DFE879002D9F66 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193EA58126DFE879002D9F66 /* GameState.swift */; };
 		193EA58426DFE955002D9F66 /* AISign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193EA58326DFE955002D9F66 /* AISign.swift */; };
+		193EA58626E0FA22002D9F66 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193EA58526E0FA22002D9F66 /* DataManager.swift */; };
 		199B238626DF565600E3D2D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B238526DF565600E3D2D2 /* AppDelegate.swift */; };
 		199B238826DF565600E3D2D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B238726DF565600E3D2D2 /* SceneDelegate.swift */; };
 		199B238A26DF565600E3D2D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B238926DF565600E3D2D2 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		193EA58126DFE879002D9F66 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		193EA58326DFE955002D9F66 /* AISign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISign.swift; sourceTree = "<group>"; };
+		193EA58526E0FA22002D9F66 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		199B238226DF565600E3D2D2 /* RSPGameWithMLKitVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSPGameWithMLKitVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199B238526DF565600E3D2D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199B238726DF565600E3D2D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		199B238426DF565600E3D2D2 /* RSPGameWithMLKitVision */ = {
 			isa = PBXGroup;
 			children = (
+				193EA58526E0FA22002D9F66 /* DataManager.swift */,
 				199B238526DF565600E3D2D2 /* AppDelegate.swift */,
 				199B238726DF565600E3D2D2 /* SceneDelegate.swift */,
 				199B238926DF565600E3D2D2 /* ViewController.swift */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				199B238A26DF565600E3D2D2 /* ViewController.swift in Sources */,
+				193EA58626E0FA22002D9F66 /* DataManager.swift in Sources */,
 				193EA58226DFE879002D9F66 /* GameState.swift in Sources */,
 				193EA58426DFE955002D9F66 /* AISign.swift in Sources */,
 				199B238626DF565600E3D2D2 /* AppDelegate.swift in Sources */,

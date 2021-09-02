@@ -9,14 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
-    
+    @IBOutlet weak var aiSign: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+    }
+    
+    // For tests
+    @IBAction func testButton(_ sender: UIButton) {
+        let aiSignChoice = AISign.shared.aiRandomChoice()
+        aiSign.text = aiSignChoice.emojiSign
     }
     
     @IBAction func fetchFromCamera(_ sender: UIButton) {
