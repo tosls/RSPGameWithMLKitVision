@@ -6,18 +6,23 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var aiSign: UILabel!
+    
+    var imageLabeler: VisionImageLabeler?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
     }
+    
+    
     
     // For tests
     @IBAction func testButton(_ sender: UIButton) {
@@ -49,9 +54,21 @@ class ViewController: UIViewController {
         resultLabel.layer.masksToBounds = true
         resultLabel.layer.cornerRadius = 5
     }
+    
+    func initializeModel() {
+        
+        guard let manifestPath = Bundle.main.path(forResource: "tflite_metadata", ofType: "json", inDirectory: "rspModel") else {
+            print("Couldn't find file")
+            return
+        }
+        let localModel = AutoMLLocalModel(manifestPath: manifestPath)
+        let labelerOptions = VisionOnDeviceAutoMLImageLabelerOptions(localModel: localModel)
+        labelerOptions.confidenceThreshold = 0.5
+        imageLabeler = Vision.vision().onDeviceAutoMLImageLabeler(options: labelerOptions)
+    }
 }
 
-extension ViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
@@ -69,5 +86,12 @@ extension ViewController: UIImagePickerControllerDelegate & UINavigationControll
         imageView.image = imageToSave
         resultLabel.text = "test"
         dismiss(animated: true)
+        
+        guard imageToSave != nil else {
+            print("not Image")
+            return
+        }
+        let visionImage = VisionImage(image: imageToSave!)
+        
     }
 }

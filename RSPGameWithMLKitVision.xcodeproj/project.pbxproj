@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		193EA58026DFB764002D9F66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 193EA57F26DFB764002D9F66 /* FirebaseAnalytics */; };
+		10E51BEF4AFAE12CD62F9D1A /* Pods_RSPGameWithMLKitVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7509988A3585A143408824D1 /* Pods_RSPGameWithMLKitVision.framework */; };
 		193EA58226DFE879002D9F66 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193EA58126DFE879002D9F66 /* GameState.swift */; };
 		193EA58426DFE955002D9F66 /* AISign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193EA58326DFE955002D9F66 /* AISign.swift */; };
 		193EA58626E0FA22002D9F66 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193EA58526E0FA22002D9F66 /* DataManager.swift */; };
+		193EA58826E150D9002D9F66 /* rspModel in Resources */ = {isa = PBXBuildFile; fileRef = 193EA58726E150D9002D9F66 /* rspModel */; };
 		199B238626DF565600E3D2D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B238526DF565600E3D2D2 /* AppDelegate.swift */; };
 		199B238826DF565600E3D2D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B238726DF565600E3D2D2 /* SceneDelegate.swift */; };
 		199B238A26DF565600E3D2D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B238926DF565600E3D2D2 /* ViewController.swift */; };
@@ -21,9 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14F4232C67A4C7CD1C35273D /* Pods-RSPGameWithMLKitVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSPGameWithMLKitVision.release.xcconfig"; path = "Target Support Files/Pods-RSPGameWithMLKitVision/Pods-RSPGameWithMLKitVision.release.xcconfig"; sourceTree = "<group>"; };
 		193EA58126DFE879002D9F66 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		193EA58326DFE955002D9F66 /* AISign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISign.swift; sourceTree = "<group>"; };
 		193EA58526E0FA22002D9F66 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		193EA58726E150D9002D9F66 /* rspModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rspModel; sourceTree = "<group>"; };
 		199B238226DF565600E3D2D2 /* RSPGameWithMLKitVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSPGameWithMLKitVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199B238526DF565600E3D2D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199B238726DF565600E3D2D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,8 @@
 		199B239126DF565800E3D2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199B239326DF565800E3D2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		199B239926DFACCE00E3D2D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7509988A3585A143408824D1 /* Pods_RSPGameWithMLKitVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSPGameWithMLKitVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A10062018AC332510E2FED /* Pods-RSPGameWithMLKitVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSPGameWithMLKitVision.debug.xcconfig"; path = "Target Support Files/Pods-RSPGameWithMLKitVision/Pods-RSPGameWithMLKitVision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193EA58026DFB764002D9F66 /* FirebaseAnalytics in Frameworks */,
+				10E51BEF4AFAE12CD62F9D1A /* Pods_RSPGameWithMLKitVision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +55,11 @@
 		199B237926DF565600E3D2D2 = {
 			isa = PBXGroup;
 			children = (
+				193EA58726E150D9002D9F66 /* rspModel */,
 				199B238426DF565600E3D2D2 /* RSPGameWithMLKitVision */,
 				199B238326DF565600E3D2D2 /* Products */,
+				6E9A53624D4A735E7374F18F /* Pods */,
+				EFB78D9B23D9A27D7ABF28A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +89,23 @@
 			path = RSPGameWithMLKitVision;
 			sourceTree = "<group>";
 		};
+		6E9A53624D4A735E7374F18F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98A10062018AC332510E2FED /* Pods-RSPGameWithMLKitVision.debug.xcconfig */,
+				14F4232C67A4C7CD1C35273D /* Pods-RSPGameWithMLKitVision.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EFB78D9B23D9A27D7ABF28A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7509988A3585A143408824D1 /* Pods_RSPGameWithMLKitVision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,18 +113,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 199B239626DF565800E3D2D2 /* Build configuration list for PBXNativeTarget "RSPGameWithMLKitVision" */;
 			buildPhases = (
+				E3AD285185974BEFB1481B6B /* [CP] Check Pods Manifest.lock */,
 				199B237E26DF565600E3D2D2 /* Sources */,
 				199B237F26DF565600E3D2D2 /* Frameworks */,
 				199B238026DF565600E3D2D2 /* Resources */,
+				C9089E16729533F6DD07CAF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RSPGameWithMLKitVision;
-			packageProductDependencies = (
-				193EA57F26DFB764002D9F66 /* FirebaseAnalytics */,
-			);
 			productName = RSPGameWithMLKitVision;
 			productReference = 199B238226DF565600E3D2D2 /* RSPGameWithMLKitVision.app */;
 			productType = "com.apple.product-type.application";
@@ -127,9 +151,6 @@
 				Base,
 			);
 			mainGroup = 199B237926DF565600E3D2D2;
-			packageReferences = (
-				193EA57E26DFB764002D9F66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 199B238326DF565600E3D2D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193EA58826E150D9002D9F66 /* rspModel in Resources */,
 				199B239226DF565800E3D2D2 /* LaunchScreen.storyboard in Resources */,
 				199B239A26DFACCE00E3D2D2 /* GoogleService-Info.plist in Resources */,
 				199B238F26DF565800E3D2D2 /* Assets.xcassets in Resources */,
@@ -152,6 +174,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9089E16729533F6DD07CAF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSPGameWithMLKitVision/Pods-RSPGameWithMLKitVision-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSPGameWithMLKitVision/Pods-RSPGameWithMLKitVision-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSPGameWithMLKitVision/Pods-RSPGameWithMLKitVision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3AD285185974BEFB1481B6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSPGameWithMLKitVision-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		199B237E26DF565600E3D2D2 /* Sources */ = {
@@ -298,6 +362,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -307,6 +372,7 @@
 		};
 		199B239726DF565800E3D2D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A10062018AC332510E2FED /* Pods-RSPGameWithMLKitVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +392,7 @@
 		};
 		199B239826DF565800E3D2D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14F4232C67A4C7CD1C35273D /* Pods-RSPGameWithMLKitVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -365,25 +432,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		193EA57E26DFB764002D9F66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.6.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		193EA57F26DFB764002D9F66 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 193EA57E26DFB764002D9F66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 199B237A26DF565600E3D2D2 /* Project object */;
 }
