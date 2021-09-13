@@ -19,10 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initializeModel()
         setupView()
     }
-    
-    
     
     // For tests
     @IBAction func testButton(_ sender: UIButton) {
@@ -66,6 +65,30 @@ class ViewController: UIViewController {
         labelerOptions.confidenceThreshold = 0.5
         imageLabeler = Vision.vision().onDeviceAutoMLImageLabeler(options: labelerOptions)
     }
+    
+    func performMLOn(_ visionImage: VisionImage) {
+        print("TestOne")
+        imageLabeler?.process(visionImage, completion: { [weak self] (labels, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            print("Test Two")
+            if let labels = labels {
+                if labels.count == 0 {
+                    self?.resultLabel.text = "Nothing"
+                    return
+                }
+                for visionLabel in labels {
+                    let confidenceString = String(format: "%0.2f", (visionLabel.confidence ?? 0).doubleValue * 100)
+                    let labelText = visionLabel.text.trimmingCharacters(in: .whitespacesAndNewlines)
+                    let resultString = "\(visionLabel.text) -- \(confidenceString)% confident"
+                    print(resultString)
+                    self?.resultLabel.text = resultString
+                }
+            }
+        })
+    }
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -92,6 +115,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             return
         }
         let visionImage = VisionImage(image: imageToSave!)
+        performMLOn(visionImage)
         
     }
 }
