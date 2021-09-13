@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import MLKit
 
 class ViewController: UIViewController {
     
@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var aiSign: UILabel!
     
-    var imageLabeler: VisionImageLabeler?
+    var imageLabeler: ImageLabeler?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,18 +60,27 @@ class ViewController: UIViewController {
             print("Couldn't find file")
             return
         }
-        let localModel = AutoMLLocalModel(manifestPath: manifestPath)
-        let labelerOptions = VisionOnDeviceAutoMLImageLabelerOptions(localModel: localModel)
+//        let localModel = AutoMLLocalModel(manifestPath: manifestPath)
+        guard let localModel = LocalModel(manifestPath: manifestPath) else { return }
+        print("2323")
+//        let labelerOptions = VisionOnDeviceAutoMLImageLabelerOptions(localModel: localModel)
+        let labelerOptions = CustomImageLabelerOptions(localModel: localModel)
         labelerOptions.confidenceThreshold = 0.5
-        imageLabeler = Vision.vision().onDeviceAutoMLImageLabeler(options: labelerOptions)
+//        imageLabeler = Vision.vision().onDeviceAutoMLImageLabeler(options: labelerOptions)
+        imageLabeler = ImageLabeler.imageLabeler(options: labelerOptions)
+        print(imageLabeler)
+        print("test 23")
     }
     
     func performMLOn(_ visionImage: VisionImage) {
         print("TestOne")
-        imageLabeler?.process(visionImage, completion: { [weak self] (labels, error) in
+        imageLabeler?.process(visionImage, completion: {[weak self] (labels, error) in
+            print("Test2")
             if let error = error {
                 print(error.localizedDescription)
                 return
+//        imageLabeler?.process(visionImage, completion: { [weak self] (labels, error) in
+            
             }
             print("Test Two")
             if let labels = labels {
@@ -80,7 +89,7 @@ class ViewController: UIViewController {
                     return
                 }
                 for visionLabel in labels {
-                    let confidenceString = String(format: "%0.2f", (visionLabel.confidence ?? 0).doubleValue * 100)
+                    let confidenceString = String(format: "%0.2f", "Test3")
                     let labelText = visionLabel.text.trimmingCharacters(in: .whitespacesAndNewlines)
                     let resultString = "\(visionLabel.text) -- \(confidenceString)% confident"
                     print(resultString)
